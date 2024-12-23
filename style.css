@@ -29,9 +29,6 @@ h2 {
     padding: 10px;
     height: 60px;
     margin-bottom: 10px;
-
-
-
 }
 
 .password {
@@ -42,6 +39,18 @@ h2 {
 .copyButton {
     padding-right: 25px;
     padding-top: 5px;
+}
+
+.copyButton:active {
+    transform: scale(0.9);
+}
+
+.copyButton:focus {
+    transform: scale(0.9);
+}
+
+.copyButton:hover {
+    cursor: pointer;
 }
 
 .OptionsSection {
@@ -62,6 +71,10 @@ h2 {
     background: linear-gradient(#A638F6, #A638F6) 0 / var(--sx) 100% no-repeat #24232C;
 }
 
+.characterSlider .slider:hover {
+    cursor: pointer;
+}
+
 .characterSlider .slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
@@ -73,7 +86,6 @@ h2 {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-/* Lägg till dessa nya regler för att få den progressiva fyllningen */
 .characterSlider .slider {
     --range: calc(var(--max) - var(--min));
     --ratio: calc((var(--val) - var(--min)) / var(--range));
@@ -81,7 +93,6 @@ h2 {
     --min: 1;
     --max: 10;
     --val: 5;
-    /* Default värde */
 }
 
 
@@ -194,4 +205,8 @@ h2 {
     margin: 25px;
     font-weight: 300;
     background-color: #A638F6;
+}
+
+.generateButton:hover {
+    cursor: pointer;
 }

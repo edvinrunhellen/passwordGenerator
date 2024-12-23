@@ -4,6 +4,32 @@
 //Denna eventlisterner lyssnar på om det är 1-10
 //Den ska sedan uppdatera siffran som är till höger
 updatesSliderNumber()
+copyPassword()
+
+function copyPassword() {
+    let copy = document.getElementById("copyImage")
+    copyImage.addEventListener("click", copyPasswordToClipboard);
+}
+
+function copyPasswordToClipboard() {
+    const generatedPassword = document.getElementById("generatedPassword");
+    navigator.clipboard.writeText(generatedPassword.textContent);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -12,7 +38,6 @@ function updatesSliderNumber() {
     const sliderValue = document.getElementById("sliderValue");
 
     if (!slider || !sliderValue) {
-        console.error("Kunde inte hitta slider eller sliderValue element");
         return;
     }
 
