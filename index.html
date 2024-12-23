@@ -7,7 +7,7 @@
 
   <link rel="icon" sizes="32x32" href="./assets/images/techover.ico" />
   <title>Lösenords Generator</title>
-  <script src="app.js"></script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -16,6 +16,7 @@
 </head>
 
 <body>
+
   <link rel="stylesheet" href="style.css">
   <section>
     <div>
@@ -37,11 +38,11 @@
                 <p>Character Length</p>
               </div>
               <div class="characterCounter">
-                <p>10</p>
+                <p id="sliderValue">10</p>
               </div>
             </div>
             <div class="characterSlider">
-              <input type="range" min="1" max="100" value="100" class="slider" id="myRange">
+              <input type="range" min="1" max="10" value="10" class="slider">
             </div>
           </div>
           <div class="selectionButtons">
@@ -92,8 +93,9 @@
         </div>
       </div>
     </div>
-    </div>
+
   </section>
+  <script src="app.js"></script>
 </body>
 
 </html>
