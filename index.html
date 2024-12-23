@@ -1,18 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="icon" sizes="32x32" href="./assets/images/techover.ico" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Lösenords Generator</title>
-  </head>
-  <body>
-    Password Generator uvt1k5v3b28o87a Character Length Include Uppercase
-    Letters Include Lowercase Letters Include Numbers Include Symbols Strength
-    Generate
+  <link rel="icon" sizes="32x32" href="./assets/images/techover.ico" />
+  <link rel="stylesheet" href="style.css">
+  <title>Lösenords Generator</title>
+</head>
 
-    <img src="./assets/images/techover-logo.png" alt="Techover Logo" />
-  </body>
+<body>
+  <section>
+    <div>
+      <div class="card">
+        <h2>Password Generator</h2>
+        <div class="generatedPasswordSection">
+          <div class="password">
+            <p>uvt1k5v3b28o87a</p>
+          </div>
+          <div class="copyButton">
+            <img src="images/copy-icon.svg" alt="">
+          </div>
+        </div>
+        <div class="OptionsSection">
+          <div class="length">
+            <div class="characterLength">
+              <p>Character Length</p>
+            </div>
+            <div class="characterCounter">
+              <p>10</p>
+            </div>
+
+          </div>
+          <div class="characterSlider">
+            <input type="range" min="1" max="100" value="100" class="slider" id="myRange">
+          </div>
+          <div class="selectionButtons">
+            <ul>
+              <li>
+                <label>
+                  <input type="checkbox" id="uppercase" />
+                  Include Uppercase Letters
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" id="lowercase" />
+                  Include Lowercase Letters
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" id="numbers" />
+                  Include Numbers
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" id="symbols" />
+                  Include Symbols
+                </label>
+              </li>
+            </ul>
+          </div>
+          <div class="strengthBar">
+            <div>
+              <p>Strength</p>
+            </div>
+          </div>
+          <div class="generateButton">
+            <button type="button">Generate</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+</body>
+
 </html>
