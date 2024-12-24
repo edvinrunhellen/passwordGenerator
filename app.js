@@ -16,7 +16,23 @@ let password = document.getElementById("generatedPassword")
 function generatePassword() {
     const sliderValueElement = document.getElementById("sliderValue");
     const sliderValue = Number(sliderValueElement.textContent);
-    let chars = "0123456789abcdefghijklmnopqrstuvwxyz!@#$%^&*()ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+    const includeUppercaseLetter = document.getElementById("uppercase").checked;
+    const includelowercaseLetter = document.getElementById("lowercase").checked;
+    const includeNumbers = document.getElementById("numbers").checked;
+    const includeSymbols = document.getElementById("symbols").checked;
+
+    let chars = ""
+    if (includeUppercaseLetter) chars += "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    if (includelowercaseLetter) chars += "abcdefghijklmnopqrstuvwxyz";
+    if (includeNumbers) chars += "0123456789";
+    if (includeSymbols) chars += "!@#$%^&*()";
+
+    if (chars === "") {
+        document.getElementById("generatedPassword").textContent = "Select an option!";
+        return;
+    }
+
     let password = "";
     for (let i = 0; i < sliderValue; i++) {
         let randomNumber = Math.floor(Math.random() * chars.length);
