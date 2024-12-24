@@ -6,12 +6,6 @@
 updatesSliderNumber()
 copyPassword()
 
-
-
-
-
-
-
 let password = document.getElementById("generatedPassword")
 function generatePassword() {
     const sliderValueElement = document.getElementById("sliderValue");
@@ -39,6 +33,20 @@ function generatePassword() {
         password += chars.substring(randomNumber, randomNumber + 1)
     }
     document.getElementById("generatedPassword").textContent = password
+
+    if (sliderValue < 4) {
+        document.querySelector(".qualityIndicator").textContent = "Weak!";
+        let sliderValue = Number(document.getElementById("sliderId").value);
+    } else if (sliderValue >= 4 && sliderValue < 6) {
+        document.querySelector(".qualityIndicator").textContent = "Fair!";
+        let sliderValue = Number(document.getElementById("sliderId").value);
+    } else if (sliderValue >= 6 && sliderValue < 8) {
+        document.querySelector(".qualityIndicator").textContent = "Good!";
+        let sliderValue = Number(document.getElementById("sliderId").value);
+    } else if (sliderValue >= 8) {
+        document.querySelector(".qualityIndicator").textContent = "Great!";
+        let sliderValue = Number(document.getElementById("sliderId").value);
+    }
 }
 
 function copyPassword() {
