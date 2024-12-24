@@ -207,6 +207,18 @@ h2 {
     background-color: #A638F6;
 }
 
+.generateButton:focus {
+
+    transform: scale(0.9);
+
+}
+
+.generateButton:active {
+
+    transform: scale(0.9);
+
+}
+
 .generateButton:hover {
     cursor: pointer;
 }

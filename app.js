@@ -6,6 +6,26 @@
 updatesSliderNumber()
 copyPassword()
 
+
+
+
+
+let password = document.getElementById("generatedPassword")
+function generatePassword() {
+    let chars = "0123456789abcdefghijklmnopqrstuvwxyz!@#$%^&*()ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    let passwordLength = 12;
+    let password = "";
+    for (let i = 0; i < passwordLength; i++) {
+        let randomNumber = Math.floor(Math.random() * chars.length);
+        password += chars.substring(randomNumber, randomNumber + 1)
+    }
+    document.getElementById("generatedPassword").textContent = password
+}
+
+
+
+
+
 function copyPassword() {
     let copy = document.getElementById("copyImage")
     copyImage.addEventListener("click", copyPasswordToClipboard);
@@ -16,22 +36,6 @@ function copyPasswordToClipboard() {
     navigator.clipboard.writeText(generatedPassword.textContent);
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 function updatesSliderNumber() {
     const slider = document.querySelector(".slider");
