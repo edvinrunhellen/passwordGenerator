@@ -35,15 +35,33 @@ function generatePassword() {
     document.getElementById("generatedPassword").textContent = password
 
     if (sliderValue < 4) {
+        document.querySelectorAll("#box1").forEach(element => {
+            element.style.backgroundColor = "white";
+        });
         document.querySelector(".qualityIndicator").textContent = "Weak!";
         let sliderValue = Number(document.getElementById("sliderId").value);
-    } else if (sliderValue >= 4 && sliderValue < 6) {
+    }
+
+    else if (sliderValue >= 4 && sliderValue < 6) {
+        document.querySelectorAll("#box1, #box2").forEach(element => {
+            element.style.backgroundColor = "white";
+        });
         document.querySelector(".qualityIndicator").textContent = "Fair!";
         let sliderValue = Number(document.getElementById("sliderId").value);
-    } else if (sliderValue >= 6 && sliderValue < 8) {
+    }
+
+    else if (sliderValue >= 6 && sliderValue < 8) {
+        document.querySelectorAll("#box1, #box2, #box3").forEach(element => {
+            element.style.backgroundColor = "white";
+        });
         document.querySelector(".qualityIndicator").textContent = "Good!";
         let sliderValue = Number(document.getElementById("sliderId").value);
-    } else if (sliderValue >= 8) {
+    }
+
+    else if (sliderValue >= 8) {
+        document.querySelectorAll("#box1, #box2, #box3, #box4").forEach(element => {
+            element.style.backgroundColor = "white";
+        });
         document.querySelector(".qualityIndicator").textContent = "Great!";
         let sliderValue = Number(document.getElementById("sliderId").value);
     }

@@ -175,6 +175,7 @@ h2 {
 
 .qualityIndicator {
     padding-left: 100px;
+    padding-top: 17px;
 }
 
 .strength-meter {
@@ -194,9 +195,6 @@ h2 {
     border: 2px solid #fff;
 }
 
-.strength-bar.filled {
-    background-color: #A4FFAF;
-}
 
 .generateButton {
     display: flex;
