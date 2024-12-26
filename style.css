@@ -1,10 +1,10 @@
 body {
     background-color: #16111A;
+    background-size: cover;
     color: white;
     font-size: 18px;
     font-family: "JetBrains Mono", serif;
     font-weight: 300;
-
 }
 
 
@@ -160,22 +160,24 @@ h2 {
 .strengthBar {
     display: flex;
     justify-content: space-around;
-
     margin: 25px;
     font-weight: 300;
     background-color: #A638F6;
+}
+
+.strength {
+    padding-top: 4px;
 }
 
 .characterSelectorBar {
     margin-left: 25px;
     margin-right: 25px;
     font-weight: 300;
-
 }
 
 .qualityIndicator {
     padding-left: 100px;
-    padding-top: 17px;
+    padding-top: 4px;
 }
 
 .strength-meter {
@@ -206,15 +208,11 @@ h2 {
 }
 
 .generateButton:focus {
-
     transform: scale(0.9);
-
 }
 
 .generateButton:active {
-
     transform: scale(0.9);
-
 }
 
 .generateButton:hover {

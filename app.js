@@ -57,7 +57,7 @@ function generatePassword() {
         });
         document.querySelector(".qualityIndicator p").textContent = "Good!";
     }
-    else if (sliderValue >= 8 && includeUppercaseLetter && includelowercaseLetter && includeNumbers && includeSymbols) {
+    else if (sliderValue >= 8) {
         document.querySelectorAll(".strength-bar").forEach(element => {
             element.style.backgroundColor = "white";
         });
