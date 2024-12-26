@@ -6,6 +6,8 @@
 updatesSliderNumber()
 copyPassword()
 
+
+
 let password = document.getElementById("generatedPassword")
 function generatePassword() {
     const sliderValueElement = document.getElementById("sliderValue");
@@ -34,48 +36,33 @@ function generatePassword() {
     }
     document.getElementById("generatedPassword").textContent = password
 
+    document.querySelectorAll(".strength-bar").forEach(element => {
+        element.style.backgroundColor = "transparent";
+    });
+
+    // Uppdatera styrkan baserat på villkor
     if (sliderValue < 4) {
-        document.querySelectorAll("#box1").forEach(element => {
-            element.style.backgroundColor = "white";
-        });
-        document.querySelector(".qualityIndicator").textContent = "Weak!";
-        let sliderValue = Number(document.getElementById("sliderId").value);
+        document.querySelector(".strength-bar:nth-child(1)").style.backgroundColor = "white";
+        document.querySelector(".qualityIndicator p").textContent = "Weak!";
     }
-
     else if (sliderValue >= 4 && sliderValue < 6) {
-        document.querySelectorAll("#box1, #box2").forEach(element => {
+        document.querySelectorAll(".strength-bar:nth-child(-n+2)").forEach(element => {
             element.style.backgroundColor = "white";
         });
-        document.querySelector(".qualityIndicator").textContent = "Fair!";
-        let sliderValue = Number(document.getElementById("sliderId").value);
+        document.querySelector(".qualityIndicator p").textContent = "Fair!";
     }
-
     else if (sliderValue >= 6 && sliderValue < 8) {
-        document.querySelectorAll("#box1, #box2, #box3").forEach(element => {
+        document.querySelectorAll(".strength-bar:nth-child(-n+3)").forEach(element => {
             element.style.backgroundColor = "white";
         });
-        document.querySelector(".qualityIndicator").textContent = "Good!";
-        let sliderValue = Number(document.getElementById("sliderId").value);
+        document.querySelector(".qualityIndicator p").textContent = "Good!";
     }
-
-    else if (sliderValue >= 8) {
-        document.querySelectorAll("#box1, #box2, #box3, #box4").forEach(element => {
+    else if (sliderValue >= 8 && includeUppercaseLetter && includelowercaseLetter && includeNumbers && includeSymbols) {
+        document.querySelectorAll(".strength-bar").forEach(element => {
             element.style.backgroundColor = "white";
         });
-        document.querySelector(".qualityIndicator").textContent = "Great!";
-        let sliderValue = Number(document.getElementById("sliderId").value);
+        document.querySelector(".qualityIndicator p").textContent = "Great!";
     }
-}
-
-function copyPassword() {
-    let copy = document.getElementById("copyImage")
-    copy.addEventListener("click", copyPasswordToClipboard);
-}
-
-function copyPasswordToClipboard() {
-    const generatedPassword = document.getElementById("generatedPassword");
-    navigator.clipboard.writeText(generatedPassword.textContent);
-
 }
 
 function updatesSliderNumber() {
