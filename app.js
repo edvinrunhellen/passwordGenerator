@@ -85,6 +85,13 @@ function updatesSliderNumber() {
     updateSlider();
 }
 
+function copyPassword() {
+    const password = document.getElementById("generatedPassword").innerText;
+    if (password && password !== "Press generate!") {
+        navigator.clipboard.writeText(password);
+    }
+}
 
+document.getElementById("copyImage").addEventListener("click", copyPassword);
 
 
