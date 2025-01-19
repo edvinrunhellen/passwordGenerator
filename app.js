@@ -41,23 +41,23 @@ function generatePassword() {
     });
 
     // Uppdatera styrkan baserat på villkor
-    if (sliderValue < 4) {
+    if (sliderValue < 7) {
         document.querySelector(".strength-bar:nth-child(1)").style.backgroundColor = "orange";
         document.querySelector(".qualityIndicator p").textContent = "Weak!";
     }
-    else if (sliderValue >= 4 && sliderValue < 6) {
+    else if (sliderValue >= 7 && sliderValue < 10) {
         document.querySelectorAll(".strength-bar:nth-child(-n+2)").forEach(element => {
             element.style.backgroundColor = "orange";
         });
         document.querySelector(".qualityIndicator p").textContent = "Fair!";
     }
-    else if (sliderValue >= 6 && sliderValue < 8) {
+    else if (sliderValue >= 10 && sliderValue < 16) {
         document.querySelectorAll(".strength-bar:nth-child(-n+3)").forEach(element => {
             element.style.backgroundColor = "orange";
         });
         document.querySelector(".qualityIndicator p").textContent = "Good!";
     }
-    else if (sliderValue >= 8) {
+    else if (sliderValue >= 16) {
         document.querySelectorAll(".strength-bar").forEach(element => {
             element.style.backgroundColor = "orange";
         });
