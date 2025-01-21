@@ -1,8 +1,3 @@
-
-//Funktion som uppdaterar "character length siffran när man sliderar på slidern"
-//Först behöver det finnas en eventlistener på slidern
-//Denna eventlisterner lyssnar på om det är 1-10
-//Den ska sedan uppdatera siffran som är till höger
 updatesSliderNumber()
 copyPassword()
 
