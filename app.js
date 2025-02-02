@@ -82,7 +82,7 @@ function updatesSliderNumber() {
 
 function copyPassword() {
     const password = document.getElementById("generatedPassword").innerText;
-    if (password && password !== "Press generate!" && password !== "Select an option!") {
+    if (password && password !== "Press generate!" && password !== "Select an option") {
         navigator.clipboard.writeText(password);
     }
 }
